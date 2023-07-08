@@ -32,6 +32,7 @@ const Home = () => {
       link.download = "output.epub"
       link.click()
       window.URL.revokeObjectURL(downloadURL)
+      console.log(`Downloaded: ${URL}`)
     }
 
     setIsLoading(false)
