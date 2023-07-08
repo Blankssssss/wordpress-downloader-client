@@ -40,7 +40,7 @@ const Home = () => {
   return (
     <div className="container">
       <div className="description">
-        <h1 className="title">Chuyển đổi truyện trên Wordpress thành file EPUB</h1>
+        <h1 className="title">Chuyển đổi truyện trên <span>Wordpress</span> thành file <span>EPUB</span></h1>
         <label htmlFor="inputURL">Nhập URL của truyện:</label>
         <input id="inputURL" type="text" value={URL} onChange={e => setURL(e.target.value)} placeholder="https://ten-mien.wordpress.com/ten-truyen/" />
         <button onClick={handleSubmit}>Tải xuống</button>
@@ -48,7 +48,7 @@ const Home = () => {
         <p className="error-message">{errorMessage}</p>
       </div>
       <div className="example">
-        <p>Lưu ý: URL phải có phần Mục Lục chứa các đường link dẫn đến các chương truyện như hình dưới.</p>
+        <p className="note">Lưu ý: URL phải có phần Mục Lục chứa các đường link dẫn đến các chương truyện như hình dưới.</p>
         <img src={exampleImage} />
       </div>
     </div>
