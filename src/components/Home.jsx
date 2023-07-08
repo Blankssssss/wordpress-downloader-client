@@ -16,7 +16,7 @@ const Home = () => {
     }
     
     setIsLoading(true)
-    const response = await fetch("https://wordpress-downloader-server.vercel.app/", {
+    const response = await fetch("https://wordpress-downloader-server.onrender.com/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url: URL })
