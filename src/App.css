@@ -14,12 +14,12 @@
 html {
   width: 100%;
   font-size: 16px;
-  font-family: 'Inter', sans-serif;;
+  font-family: 'Inter', sans-serif;
 }
 
 .container {
   max-width: 100%;
-  margin: 3em 0;
+  margin: 2em 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   align-items: center;
@@ -41,7 +41,7 @@ span {
   color: var(--red);
 }
 
-label, .note {
+label, .note, a {
   font-size: 1.1rem;
 }
 
@@ -87,4 +87,23 @@ p {
 
 input, img {
   width: 100%;
+}
+
+.link {
+  display: block;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a, a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--red)
 }
