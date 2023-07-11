@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import exampleImage from "../assets/example.png"
 
 const Home = () => {
   const [URL, setURL] = useState("")
   const [isLoading, setIsLoading] = useState(false)
-  const [downloadTime, setDownloadTime] = useState(0)
   const [errorMessage, setErrorMessage] = useState("")
 
   const handleSubmit = async (e) => {
@@ -38,16 +37,6 @@ const Home = () => {
     setIsLoading(false)
   }
 
-  useEffect(() => {
-    let timer
-    if (isLoading) {
-      timer = setInterval(() => { setDownloadTime(prevTime => prevTime + 1) }, 1000)
-    } else {
-      setDownloadTime(0)
-    }
-    return () => clearInterval(timer)
-  }, [isLoading])
-
   return (
     <>
       <div className="container">
@@ -56,7 +45,7 @@ const Home = () => {
           <label htmlFor="inputURL">Nhập URL của truyện:</label>
           <input id="inputURL" type="text" value={URL} onChange={e => setURL(e.target.value)} placeholder="https://ten-mien.wordpress.com/ten-truyen/" />
           <button onClick={handleSubmit}>Tải xuống</button>
-          {isLoading && <p>Đang tải... ({downloadTime}s)</p>}
+          {isLoading && <p>Đang tải...</p>}
           <p className="error-message">{errorMessage}</p>
         </div>
         <div className="example">
